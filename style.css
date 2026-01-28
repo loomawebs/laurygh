@@ -1,0 +1,627 @@
+:root {
+  --primary: #024138;
+  --accent: #6bd391;
+  --white: #ffffff;
+  --gray: #f4f7f9;
+  --text-dark: #1a1f36;
+  --text-light: #4f566b;
+  --success: #25d366;
+  --bg-1: #024138e7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAV */
+.navbar {
+  background: var(--white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Playfair", serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* HERO - FORZADO 100% Y REPARTIDO */
+.hero-section {
+  height: 85vh;
+  background: url("https://cdn.prod.website-files.com/634681057b887c6f4830fae2/694052d88d347642cba79a74_8%20Effective%20Successful%20Meeting.jpg")
+    center/cover;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero {
+  background: var(--bg-1);
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  color: var(--white);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* BADGE ARRIBA - TEXTO MEDIO - BOTONES ABAJO */
+  text-align: center;
+}
+
+.badge {
+  background: rgba(6, 41, 2, 0.5);
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero-desc {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* ESTILO BOTONES */
+.btn-primary {
+  background: var(--primary);
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.btn-whatsapp {
+  background: var(--success);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* SECCIONES DETALLADAS */
+.detailed-section {
+  padding: 100px 0;
+}
+.bg-gray {
+  background: var(--gray);
+}
+.section-header {
+  text-align: center;
+}
+.icon-main {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.divider {
+  width: 350px;
+  height: 4px;
+  background: var(--accent);
+  margin: 15px auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.info-text p {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+}
+.check-list-detailed {
+  list-style: none;
+}
+.check-list-detailed li {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  font-weight: 500;
+}
+.check-list-detailed i {
+  color: var(--success);
+  margin-top: 5px;
+}
+
+/* PARTICULARES */
+.particulares {
+  padding: 80px 0;
+  background: var(--primary);
+  color: white;
+}
+.section-title-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.particulares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+.p-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.p-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+.footer {
+  background: #05101a;
+  color: white;
+  padding: 80px 0 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 100px;
+  margin-bottom: 50px;
+}
+.logo.white {
+  color: white;
+  margin-bottom: 20px;
+}
+.f-contact h4 {
+  margin-bottom: 20px;
+}
+.btn-whatsapp-footer {
+  background: var(--success);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+.trust-banner {
+  background: #ffffff; /* Fondo blanco para resaltar sobre el azul oscuro */
+  padding: 30px 0;
+  border-top: 1px solid #e1e8ed;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.trust-flex {
+  display: flex;
+  justify-content: space-around; /* Reparte los 3 items equitativamente */
+  align-items: center;
+  flex-wrap: wrap; /* Para que en el móvil se apilen si no entran */
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el icono y el texto */
+  color: #0a2540; /* El azul primario de Servinou Geslau */
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.trust-item i {
+  font-size: 1.5rem;
+  color: #0a2540;
+}
+
+.why-choose-us {
+  padding: 80px 0;
+  background: var(--gray);
+}
+
+.why-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.why-list li {
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.why-list li::before {
+  content: "✔"; /* O un icono de FontAwesome */
+  position: absolute;
+  left: 0;
+}
+
+.quote-box {
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--text-light);
+  border-top: 1px solid #e2e8f0;
+  padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    gap: 40px;
+  }
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-grid.inverted {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  .hero {
+    min-width: 100%;
+    padding: 30px;
+  }
+  .hero-btns {
+    flex-direction: column;
+  }
+  .btn-whatsapp {
+    justify-content: center;
+  }
+  .trust-flex {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* ESTILOS ACORDEÓN */
+.accordion-item {
+  background: transparent;
+  width: 100%;
+}
+
+/* Ocultar la flecha por defecto del navegador */
+details summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.header-content h2 {
+  margin: 0;
+}
+
+/* Animación de la flecha */
+.arrow {
+  font-size: 1.2rem;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+/* Espaciado del contenido cuando se abre */
+.accordion-item[open] .content-grid {
+  animation: fadeIn 0.5s ease;
+  padding-top: 30px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajuste de iconos y hover */
+.section-header:hover .icon-main {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* 1. Evitamos que el contenido aparezca de golpe */
+.accordion-item > *:not(summary) {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease-in-out,
+    opacity 0.4s ease;
+}
+
+/* 2. Cuando se abre, animamos el contenido */
+.accordion-item[open] > *:not(summary) {
+  max-height: 1000px; /* Un valor lo suficientemente grande */
+  opacity: 1;
+}
+
+/* 3. Quitamos el salto brusco del navegador */
+.accordion-item summary {
+  display: block; /* Elimina comportamientos extraños en algunos navegadores */
+  outline: none;
+}
+
+/* 4. Suavizamos el giro de la flecha que ya tenías */
+.arrow {
+  transition: transform 0.4s ease;
+}
+
+details[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.btn-whatsapp-floating {
+  width: 60px;
+  height: 60px;
+  font-size: 1.6rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--success);
+  color: white;
+  padding: 20px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.contact-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-title-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-desc {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.contact-btns {
+  margin-top: 30px;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-email {
+  text-decoration: none;
+  background: var(--primary);
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.btn-whatsapp-contact {
+  text-decoration: none;
+  background: var(--success);
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.contact-item {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.f-links {
+  padding: 0;
+  margin: 0;
+}
+.f-links h4 {
+  margin-bottom: 15px;
+}
+.f-links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.f-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.f-links a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.f-logo {
+  filter: saturate(0) brightness(10);
+  height: 80px;
+}
+
+/* Estilo del botón (oculto por defecto en PC) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block; /* Aparece en móviles */
+  }
+
+  .nav-links {
+    display: none; /* Ocultamos la lista horizontal */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  /* Clase que activaremos con JS */
+  .nav-links.active {
+    padding: 40px 0;
+    display: flex;
+  }
+
+  .detailed-section {
+    padding: 30px 20px;
+  }
+
+  .hero-section {
+    margin-bottom: 40px;
+  }
+  .hero-content {
+    gap: 20px;
+  }
+  .header-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .icon-main {
+    font-size: 2rem;
+  }
+  .divider {
+    width: 250px;
+  }
+  .particulares {
+    margin-top: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer {
+    padding: 40px;
+  }
+}
+
+/* Ajustes adicionales para móviles */
+@media (max-width: 468px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  .logo img {
+    height: 30px;
+  }
+}
+/* Ajustes adicionales para tablets */
+@media (max-width: 364px) {
+  .logo span {
+    display: none;
+  }
+}
